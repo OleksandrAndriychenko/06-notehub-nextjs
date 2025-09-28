@@ -6,11 +6,11 @@ import { useParams } from 'next/navigation'
 import css from './NoteDetails.module.css'
 
 const NoteDetailsClient = () => {
-    const { noteId } = useParams<{ noteId: string }>()
+    const { id } = useParams<{ id: string }>()
 
     const { data, isLoading, isError } = useQuery({
-        queryKey: ['note', noteId],
-        queryFn: () => fetchNoteById(noteId),
+        queryKey: ['note', id],
+        queryFn: () => fetchNoteById(id),
         refetchOnMount: false,
     })
     if (isLoading) {
