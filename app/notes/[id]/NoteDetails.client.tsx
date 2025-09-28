@@ -24,7 +24,7 @@ const NoteDetailsClient = () => {
 
     return (
         <>
-            data &&(<div className={css.container}>
+            {data &&(<div className={css.container}>
                 <div className={css.item}>
                     <div className={css.header}>
                         <h2>{data?.title}</h2>
@@ -32,7 +32,7 @@ const NoteDetailsClient = () => {
                     <p className={css.content}>{data?.content}</p>
                     <p className={css.date}>{data?.createdAt}</p>
                 </div>
-            </div>)
+            </div>)}
         </>
     )
 }
